@@ -22,9 +22,11 @@ class SelectedMovieDetailVC: UIViewController {
     @IBOutlet weak var castViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var favoriteBtn: UIButton!
     
-    
+    //MARK: - Internal Preperties
     var movieId = 0
     var imagesUrls = [URL]()
+    var movie = [Movie]()
+    var isFavoriteMovie = false
     
     //MARK: - Computed Preperties
     var movieYear : String = "" {
@@ -72,8 +74,9 @@ class SelectedMovieDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedMovieDetailRepo.delegate = self
-        
         selectedMovieDetailRepo.getMovieDetail(apiKey: G_CLIENT_ID, movieId: movieId)
+        fetchDaata()
+        
     }
     override func viewDidLayoutSubviews() {
         castViewBottomConstraint.constant = imagesTableView.contentSize.height
@@ -116,12 +119,36 @@ class SelectedMovieDetailVC: UIViewController {
         stackView.insertArrangedSubview(itemStack, at: 0)
     }
     
+    private func fetchDaata() {
+        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        do {
+            let movie = try PersistenceService.context.fetch(fetchRequest)
+            self.movie = movie
+        } catch {}
+    }
+    private func checkIfMovieIsFavorite() {
+        for movie in movie {
+            if movie.title == movieTitle && movie.year == movieYear {
+                self.favoriteBtn.setImage(#imageLiteral(resourceName: "ic_favorite"), for: .normal)
+                self.isFavoriteMovie = true
+            }
+        }
+    }
+    
     //MARK: - trigger actions
     @IBAction func actionClickOnFavoriteBtn(_ sender: Any) {
-        let movie = Movie(context: PersistenceService.context)
-        movie.title = movieTitle
-        movie.year = movieYear
-        PersistenceService.saveContext()
+        if self.isFavoriteMovie {
+            for (index, movie) in movie.enumerated() where movie.title == self.movieTitle && movie.year == self.movieYear {
+                PersistenceService.delete(self.movie[index])
+                self.favoriteBtn.setImage(#imageLiteral(resourceName: "ic_notFavorite"), for: .normal)
+            }
+        } else {
+            let movie = Movie(context: PersistenceService.context)
+            movie.title = movieTitle
+            movie.year = movieYear
+            PersistenceService.saveContext()
+            self.favoriteBtn.setImage(#imageLiteral(resourceName: "ic_favorite"), for: .normal)
+        }
     }
 }
 
@@ -185,6 +212,7 @@ extension SelectedMovieDetailVC : MovieDetailDelegate {
                 self.genres.append(genre.name ?? "")
             }
         }
+        self.checkIfMovieIsFavorite()
     }
     func getMovieDetailFailed(error: String) {
         print(error)

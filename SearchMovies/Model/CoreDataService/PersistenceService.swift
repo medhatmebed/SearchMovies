@@ -63,4 +63,25 @@ class PersistenceService {
             }
         }
     }
+    
+    
+    static func save() {
+        if PersistenceService.context.hasChanges {
+            do {
+                try PersistenceService.context.save()
+                print("saved successfully")
+                
+                
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+    
+    static func delete(_ object: NSManagedObject) {
+        PersistenceService.context.delete(object)
+        save()
+    }
+    
 }
