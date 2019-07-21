@@ -13,7 +13,7 @@
         <!--Search MoviesVC-->
         <scene sceneID="Yjp-v4-mv8">
             <objects>
-                <viewController id="Hq3-2T-Rmd" customClass="SearchMoviesVC" customModule="dlcTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hq3-2T-Rmd" customClass="SearchMoviesVC" customModule="SearchMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nPl-36-nwj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="searResultSearch" rowHeight="77" id="KYt-to-yHt" customClass="SearchTableViewCell" customModule="dlcTask" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="searResultSearch" rowHeight="77" id="KYt-to-yHt" customClass="SearchTableViewCell" customModule="SearchMovies" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KYt-to-yHt" id="Fv0-Bb-9Sm">
@@ -91,7 +91,7 @@
         <!--Selected Movie DetailVC-->
         <scene sceneID="EIz-5O-0v6">
             <objects>
-                <viewController id="we3-4w-iHP" customClass="SelectedMovieDetailVC" customModule="dlcTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="we3-4w-iHP" customClass="SelectedMovieDetailVC" customModule="SearchMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xU4-Sv-tJT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +116,9 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efg-XV-2HO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="66" id="qO8-Qp-ZNg"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -131,17 +134,17 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YMg-6x-kFO">
                                                         <rect key="frame" x="8" y="63" width="398" height="24"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3np-o2-o2q">
-                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="24"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3np-o2-o2q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="66" height="24"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="157" id="Ofu-Po-hpD"/>
+                                                                    <constraint firstAttribute="width" constant="66" id="VKc-Kw-j2F"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byp-td-kHE">
-                                                                <rect key="frame" x="167" y="0.0" width="231" height="24"/>
+                                                                <rect key="frame" x="76" y="0.0" width="322" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -247,7 +250,7 @@
                                                             <constraint firstAttribute="height" priority="250" constant="391" id="pNo-XF-jM0"/>
                                                         </constraints>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagesCell" rowHeight="298" id="z04-So-aBy" customClass="ImagesTableViewCell" customModule="dlcTask" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagesCell" rowHeight="298" id="z04-So-aBy" customClass="ImagesTableViewCell" customModule="SearchMovies" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="414" height="298"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z04-So-aBy" id="lKG-Ii-pI7">
@@ -385,7 +388,9 @@
         <scene sceneID="iuK-kF-WI8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hpk-eA-yM5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="YpS-z7-Mvz"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="T44-fr-UuH">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
