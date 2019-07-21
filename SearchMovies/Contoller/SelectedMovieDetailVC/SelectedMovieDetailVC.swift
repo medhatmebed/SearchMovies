@@ -40,6 +40,7 @@ class SelectedMovieDetailVC: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.movieNameLbl.text = self.movieTitle
+                self.navigationItem.title = self.movieTitle
             }
         }
     }
@@ -76,7 +77,6 @@ class SelectedMovieDetailVC: UIViewController {
         selectedMovieDetailRepo.delegate = self
         selectedMovieDetailRepo.getMovieDetail(apiKey: G_CLIENT_ID, movieId: movieId)
         fetchDaata()
-        
     }
     override func viewDidLayoutSubviews() {
         castViewBottomConstraint.constant = imagesTableView.contentSize.height
@@ -110,7 +110,7 @@ class SelectedMovieDetailVC: UIViewController {
         
         let chargeName = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width * 0.7, height: 20))
         chargeName.text = itemInfo ?? "N/A"
-        chargeName.textColor = .black
+        chargeName.textColor = .lightGray
         chargeName.font = .boldSystemFont(ofSize: 20)
         chargeName.setContentHuggingPriority(UILayoutPriority(250), for: .horizontal)
         chargeName.textAlignment = .center
@@ -140,14 +140,17 @@ class SelectedMovieDetailVC: UIViewController {
         if self.isFavoriteMovie {
             for (index, movie) in movie.enumerated() where movie.title == self.movieTitle && movie.year == self.movieYear {
                 PersistenceService.delete(self.movie[index])
-                self.favoriteBtn.setImage(#imageLiteral(resourceName: "ic_notFavorite"), for: .normal)
             }
-        } else {
+            self.isFavoriteMovie = false
+            self.favoriteBtn.setImage(#imageLiteral(resourceName: "ic_notFavorite"), for: .normal)
+        }
+        else {
             let movie = Movie(context: PersistenceService.context)
             movie.title = movieTitle
             movie.year = movieYear
             PersistenceService.saveContext()
             self.favoriteBtn.setImage(#imageLiteral(resourceName: "ic_favorite"), for: .normal)
+            self.isFavoriteMovie = true
         }
     }
 }

@@ -40,6 +40,7 @@ class FavoriteMoviesVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         fetchDaata()
+        self.navigationItem.title = "Favorites"
     }
     
     //MARK: - Private functions

@@ -47,6 +47,8 @@ class SearchMoviesVC: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
+        searchController.searchBar.keyboardAppearance = .dark
+        searchController.searchBar.barStyle = .black
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

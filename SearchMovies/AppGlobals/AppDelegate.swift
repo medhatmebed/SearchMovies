@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         AppManager.shared().startNetworkReachabilityObserver()
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.03921568627, alpha: 1)
+        UITabBar.appearance().tintColor = #colorLiteral(red: 0.9058823529, green: 0.2156862745, blue: 0.06274509804, alpha: 1)
+        UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
 
