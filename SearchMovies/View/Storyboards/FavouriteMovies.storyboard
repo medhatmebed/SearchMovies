@@ -108,18 +108,39 @@
                                     <outlet property="delegate" destination="W3J-It-qIb" id="I73-NT-uWP"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qI-cz-pEo">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have favorite Movies!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5x-tg-45A">
+                                        <rect key="frame" x="34" y="321" width="346.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="l5x-tg-45A" firstAttribute="centerY" secondItem="0qI-cz-pEo" secondAttribute="centerY" id="00d-is-gcg"/>
+                                    <constraint firstItem="l5x-tg-45A" firstAttribute="centerX" secondItem="0qI-cz-pEo" secondAttribute="centerX" id="WzC-Cb-Ybc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nfM-yk-9ea" firstAttribute="leading" secondItem="n5l-Id-UGJ" secondAttribute="leading" id="8cU-Gr-iXF"/>
+                            <constraint firstItem="n5l-Id-UGJ" firstAttribute="trailing" secondItem="0qI-cz-pEo" secondAttribute="trailing" id="D5O-R1-Mz4"/>
+                            <constraint firstItem="n5l-Id-UGJ" firstAttribute="bottom" secondItem="0qI-cz-pEo" secondAttribute="bottom" id="QZZ-ec-I0D"/>
                             <constraint firstItem="n5l-Id-UGJ" firstAttribute="trailing" secondItem="nfM-yk-9ea" secondAttribute="trailing" id="UCb-K2-g4F"/>
                             <constraint firstItem="n5l-Id-UGJ" firstAttribute="bottom" secondItem="nfM-yk-9ea" secondAttribute="bottom" id="UMm-1U-bGR"/>
                             <constraint firstItem="nfM-yk-9ea" firstAttribute="top" secondItem="n5l-Id-UGJ" secondAttribute="top" id="V4w-p0-ogG"/>
+                            <constraint firstItem="0qI-cz-pEo" firstAttribute="top" secondItem="n5l-Id-UGJ" secondAttribute="top" id="b5X-h9-2GK"/>
+                            <constraint firstItem="0qI-cz-pEo" firstAttribute="leading" secondItem="n5l-Id-UGJ" secondAttribute="leading" id="lqV-jZ-1SZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n5l-Id-UGJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bgn-Lu-mXj"/>
                     <connections>
+                        <outlet property="noFavoriteMoviesView" destination="0qI-cz-pEo" id="2zj-Ol-IMS"/>
                         <outlet property="tableView" destination="nfM-yk-9ea" id="4DJ-NV-6qD"/>
                     </connections>
                 </viewController>

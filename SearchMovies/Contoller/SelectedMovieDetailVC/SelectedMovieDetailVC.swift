@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import CoreData
 
 class SelectedMovieDetailVC: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
@@ -117,7 +118,10 @@ class SelectedMovieDetailVC: UIViewController {
     
     //MARK: - trigger actions
     @IBAction func actionClickOnFavoriteBtn(_ sender: Any) {
-       
+        let movie = Movie(context: PersistenceService.context)
+        movie.title = movieTitle
+        movie.year = movieYear
+        PersistenceService.saveContext()
     }
 }
 

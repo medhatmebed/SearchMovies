@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B32E4BF22E4DF2B0077783F /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32E4BE22E4DF2B0077783F /* PersistenceService.swift */; };
+		8B32E4C222E4DF930077783F /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32E4C022E4DF930077783F /* Movie+CoreDataClass.swift */; };
+		8B32E4C322E4DF930077783F /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32E4C122E4DF930077783F /* Movie+CoreDataProperties.swift */; };
 		8B83627822E4517100CDD74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83627722E4517100CDD74C /* AppDelegate.swift */; };
 		8B83627D22E4517100CDD74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B83627B22E4517100CDD74C /* Main.storyboard */; };
 		8B83628022E4517100CDD74C /* SearchMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B83627E22E4517100CDD74C /* SearchMovies.xcdatamodeld */; };
@@ -37,6 +40,9 @@
 /* Begin PBXFileReference section */
 		45C48CA4EFB00C684B900EA5 /* Pods_SearchMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CCABC24A54098D9AE0E1BE /* Pods-SearchMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies.release.xcconfig"; path = "Target Support Files/Pods-SearchMovies/Pods-SearchMovies.release.xcconfig"; sourceTree = "<group>"; };
+		8B32E4BE22E4DF2B0077783F /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		8B32E4C022E4DF930077783F /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B32E4C122E4DF930077783F /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B83627422E4517100CDD74C /* SearchMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B83627722E4517100CDD74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B83627C22E4517100CDD74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B32E4BD22E4DF0C0077783F /* CoreDataService */ = {
+			isa = PBXGroup;
+			children = (
+				8B32E4C022E4DF930077783F /* Movie+CoreDataClass.swift */,
+				8B32E4C122E4DF930077783F /* Movie+CoreDataProperties.swift */,
+				8B32E4BE22E4DF2B0077783F /* PersistenceService.swift */,
+				8B83627E22E4517100CDD74C /* SearchMovies.xcdatamodeld */,
+			);
+			path = CoreDataService;
+			sourceTree = "<group>";
+		};
 		8B83626B22E4517100CDD74C = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +121,6 @@
 				8B83628E22E4532300CDD74C /* Model */,
 				8B83628D22E4531C00CDD74C /* View */,
 				8B83628C22E4531300CDD74C /* Contoller */,
-				8B83627E22E4517100CDD74C /* SearchMovies.xcdatamodeld */,
 				8B83628622E4517200CDD74C /* Info.plist */,
 			);
 			path = SearchMovies;
@@ -134,6 +150,7 @@
 		8B83628E22E4532300CDD74C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B32E4BD22E4DF0C0077783F /* CoreDataService */,
 				8B8362B622E45D9400CDD74C /* MovieCredits.swift */,
 				8B8362B422E45D9400CDD74C /* MovieDetail.swift */,
 				8B8362B522E45D9400CDD74C /* MovieImages.swift */,
@@ -339,7 +356,9 @@
 				8B8362AF22E45AD100CDD74C /* Requestable.swift in Sources */,
 				8B8362BB22E45D9400CDD74C /* SearchModel.swift in Sources */,
 				8B8362B822E45D9400CDD74C /* MovieDetail.swift in Sources */,
+				8B32E4BF22E4DF2B0077783F /* PersistenceService.swift in Sources */,
 				8B8362BA22E45D9400CDD74C /* MovieCredits.swift in Sources */,
+				8B32E4C222E4DF930077783F /* Movie+CoreDataClass.swift in Sources */,
 				8BA30B5322E4CC9200E3F3E0 /* ImagesTableViewCell.swift in Sources */,
 				8B8362B922E45D9400CDD74C /* MovieImages.swift in Sources */,
 				8BA30B5E22E4CCD700E3F3E0 /* SearchMoviesVC.swift in Sources */,
@@ -348,6 +367,7 @@
 				8BA30B5A22E4CCCA00E3F3E0 /* SelectedMovieDetailVC.swift in Sources */,
 				8B83628022E4517100CDD74C /* SearchMovies.xcdatamodeld in Sources */,
 				8BA4179822E4DAE600CA7406 /* FavoriteTableViewCell.swift in Sources */,
+				8B32E4C322E4DF930077783F /* Movie+CoreDataProperties.swift in Sources */,
 				8B83627822E4517100CDD74C /* AppDelegate.swift in Sources */,
 				8BA30B5D22E4CCD700E3F3E0 /* SearchMoviesRepo.swift in Sources */,
 				8B83629F22E4590100CDD74C /* AppManager.swift in Sources */,
