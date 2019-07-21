@@ -15,6 +15,11 @@
 		8B83628522E4517200CDD74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B83628322E4517200CDD74C /* LaunchScreen.storyboard */; };
 		8B83629322E453B000CDD74C /* SearchMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B83629222E453B000CDD74C /* SearchMovies.storyboard */; };
 		8B83629522E453C700CDD74C /* FavouriteMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B83629422E453C700CDD74C /* FavouriteMovies.storyboard */; };
+		8B83629F22E4590100CDD74C /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83629E22E4590100CDD74C /* AppManager.swift */; };
+		8B8362AF22E45AD100CDD74C /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362AA22E45AD100CDD74C /* Requestable.swift */; };
+		8B8362B022E45AD100CDD74C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362AB22E45AD100CDD74C /* APIConstants.swift */; };
+		8B8362B122E45AD100CDD74C /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362AC22E45AD100CDD74C /* APIEndPoints.swift */; };
+		8B8362B222E45AD100CDD74C /* WebServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362AD22E45AD100CDD74C /* WebServicesManager.swift */; };
 		CEC3CCD189C65332C1AEAC98 /* Pods_SearchMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C48CA4EFB00C684B900EA5 /* Pods_SearchMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,11 @@
 		8B83628622E4517200CDD74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B83629222E453B000CDD74C /* SearchMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchMovies.storyboard; sourceTree = "<group>"; };
 		8B83629422E453C700CDD74C /* FavouriteMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteMovies.storyboard; sourceTree = "<group>"; };
+		8B83629E22E4590100CDD74C /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		8B8362AA22E45AD100CDD74C /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		8B8362AB22E45AD100CDD74C /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		8B8362AC22E45AD100CDD74C /* APIEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		8B8362AD22E45AD100CDD74C /* WebServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesManager.swift; sourceTree = "<group>"; };
 		E1BFE422133AD960DD49F490 /* Pods-SearchMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies.debug.xcconfig"; path = "Target Support Files/Pods-SearchMovies/Pods-SearchMovies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +113,10 @@
 		8B83628F22E4534800CDD74C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8B8362AD22E45AD100CDD74C /* WebServicesManager.swift */,
+				8B8362AB22E45AD100CDD74C /* APIConstants.swift */,
+				8B8362AC22E45AD100CDD74C /* APIEndPoints.swift */,
+				8B8362AA22E45AD100CDD74C /* Requestable.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -110,6 +124,7 @@
 		8B83629022E4535A00CDD74C /* AppGlobals */ = {
 			isa = PBXGroup;
 			children = (
+				8B83629E22E4590100CDD74C /* AppManager.swift */,
 				8B83627722E4517100CDD74C /* AppDelegate.swift */,
 				8B83628122E4517200CDD74C /* Assets.xcassets */,
 				8B83628622E4517200CDD74C /* Info.plist */,
@@ -262,9 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8362B222E45AD100CDD74C /* WebServicesManager.swift in Sources */,
+				8B8362AF22E45AD100CDD74C /* Requestable.swift in Sources */,
 				8B83627A22E4517100CDD74C /* ViewController.swift in Sources */,
+				8B8362B022E45AD100CDD74C /* APIConstants.swift in Sources */,
+				8B8362B122E45AD100CDD74C /* APIEndPoints.swift in Sources */,
 				8B83628022E4517100CDD74C /* SearchMovies.xcdatamodeld in Sources */,
 				8B83627822E4517100CDD74C /* AppDelegate.swift in Sources */,
+				8B83629F22E4590100CDD74C /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
