@@ -69,6 +69,16 @@ class AppManager: NSObject {
             }
         }
     }
+    class func formatDate(_ dateString : String) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY-MM-dd"
+        
+        guard let date = formatter.date(from: dateString) else {
+            return nil
+        }
+        
+        return String(Calendar.current.component(.year, from: date))
+    }
     
     class func displayOkayAlert(title:String, message:String, forController controller:UIViewController?, okayHandler:((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -88,6 +98,21 @@ class AppManager: NSObject {
         })
     }
 }
+extension AppManager {
+    class func posterUrlFor(size : ImageSize, poster : String) -> URL? {
+        guard poster != "" else { return nil}
+        let urlString = "\(imagesBaseUrl)\(size.rawValue)\(poster)"
+        return URL(string: urlString)
+    }
+}
+
+enum ImageSize : String {
+    case width92 = "w92"
+    case width185 = "w185"
+    case width500 = "w500"
+    case width780 = "w780"
+}
+
 struct Network_Error {
     static let G_NO_NETWORK_CONNECTION = "No Network Connection"
 }

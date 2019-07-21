@@ -27,20 +27,20 @@
             </objects>
             <point key="canvasLocation" x="-1768" y="-414"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--FavouriteMovies-->
         <scene sceneID="Urg-Iz-LfA">
             <objects>
-                <viewControllerPlaceholder id="7sT-I3-q1P" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FavouriteMovies" id="7sT-I3-q1P" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="B2W-Md-NhT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ML-Ou-XyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2140" y="19"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--SearchMovies-->
         <scene sceneID="b6S-zc-lW1">
             <objects>
-                <viewControllerPlaceholder id="h6l-7Z-fvG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SearchMovies" id="h6l-7Z-fvG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="QfS-JD-A2v"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joC-cB-tM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
