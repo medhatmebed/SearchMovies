@@ -20,6 +20,10 @@
 		8B8362B022E45AD100CDD74C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362AB22E45AD100CDD74C /* APIConstants.swift */; };
 		8B8362B122E45AD100CDD74C /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362AC22E45AD100CDD74C /* APIEndPoints.swift */; };
 		8B8362B222E45AD100CDD74C /* WebServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362AD22E45AD100CDD74C /* WebServicesManager.swift */; };
+		8B8362B822E45D9400CDD74C /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362B422E45D9400CDD74C /* MovieDetail.swift */; };
+		8B8362B922E45D9400CDD74C /* MovieImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362B522E45D9400CDD74C /* MovieImages.swift */; };
+		8B8362BA22E45D9400CDD74C /* MovieCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362B622E45D9400CDD74C /* MovieCredits.swift */; };
+		8B8362BB22E45D9400CDD74C /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8362B722E45D9400CDD74C /* SearchModel.swift */; };
 		CEC3CCD189C65332C1AEAC98 /* Pods_SearchMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C48CA4EFB00C684B900EA5 /* Pods_SearchMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		8B8362AB22E45AD100CDD74C /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		8B8362AC22E45AD100CDD74C /* APIEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
 		8B8362AD22E45AD100CDD74C /* WebServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesManager.swift; sourceTree = "<group>"; };
+		8B8362B422E45D9400CDD74C /* MovieDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		8B8362B522E45D9400CDD74C /* MovieImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieImages.swift; sourceTree = "<group>"; };
+		8B8362B622E45D9400CDD74C /* MovieCredits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCredits.swift; sourceTree = "<group>"; };
+		8B8362B722E45D9400CDD74C /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		E1BFE422133AD960DD49F490 /* Pods-SearchMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies.debug.xcconfig"; path = "Target Support Files/Pods-SearchMovies/Pods-SearchMovies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +91,7 @@
 				8B83628D22E4531C00CDD74C /* View */,
 				8B83628C22E4531300CDD74C /* Contoller */,
 				8B83627E22E4517100CDD74C /* SearchMovies.xcdatamodeld */,
+				8B83628622E4517200CDD74C /* Info.plist */,
 			);
 			path = SearchMovies;
 			sourceTree = "<group>";
@@ -106,6 +115,10 @@
 		8B83628E22E4532300CDD74C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B8362B622E45D9400CDD74C /* MovieCredits.swift */,
+				8B8362B422E45D9400CDD74C /* MovieDetail.swift */,
+				8B8362B522E45D9400CDD74C /* MovieImages.swift */,
+				8B8362B722E45D9400CDD74C /* SearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,7 +140,6 @@
 				8B83629E22E4590100CDD74C /* AppManager.swift */,
 				8B83627722E4517100CDD74C /* AppDelegate.swift */,
 				8B83628122E4517200CDD74C /* Assets.xcassets */,
-				8B83628622E4517200CDD74C /* Info.plist */,
 			);
 			path = AppGlobals;
 			sourceTree = "<group>";
@@ -280,6 +292,10 @@
 				8B8362B222E45AD100CDD74C /* WebServicesManager.swift in Sources */,
 				8B8362AF22E45AD100CDD74C /* Requestable.swift in Sources */,
 				8B83627A22E4517100CDD74C /* ViewController.swift in Sources */,
+				8B8362BB22E45D9400CDD74C /* SearchModel.swift in Sources */,
+				8B8362B822E45D9400CDD74C /* MovieDetail.swift in Sources */,
+				8B8362BA22E45D9400CDD74C /* MovieCredits.swift in Sources */,
+				8B8362B922E45D9400CDD74C /* MovieImages.swift in Sources */,
 				8B8362B022E45AD100CDD74C /* APIConstants.swift in Sources */,
 				8B8362B122E45AD100CDD74C /* APIEndPoints.swift in Sources */,
 				8B83628022E4517100CDD74C /* SearchMovies.xcdatamodeld in Sources */,

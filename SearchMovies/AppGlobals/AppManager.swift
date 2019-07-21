@@ -1,8 +1,8 @@
 //
-//  NetworkCondetion.swift
-//  dlcTask
+//  AppManager.swift
+//  SearchMovies
 //
-//  Created by Medhat Mebed on 7/19/19.
+//  Created by Medhat Mebed on 7/21/19.
 //  Copyright © 2019 Medhat Mebed. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class AppManager: NSObject {
-    static let G_APP_NAME = "DLC"
+    static let G_APP_NAME = "SearchMovies"
     let webServiceManager = WebServicesManager()
     
     //MARK: - Singleton of Manager
